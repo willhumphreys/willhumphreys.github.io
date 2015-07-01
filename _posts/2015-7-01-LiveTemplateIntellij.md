@@ -6,13 +6,13 @@ categories: jekyll update
 ---
 I recently refactored some code and had a lots of instances where I need to change code from
 
-```java
+```
  final Level close = levelService.get(esContract, 1700.00);
 ```
 
 to
 
-```java
+```
  final Level close = levelService.get(esContract, new BigDecimal("1700.00"));
 ```
 
@@ -27,7 +27,7 @@ Write a description `Surround with BigDecimal`.
 
 ####Code
 Create a new template and write your content.
-```java
+```
 new java.math.BigDecimal("$SELECTION$")
 ```
 
