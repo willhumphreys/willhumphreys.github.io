@@ -4,16 +4,16 @@ title:  "Intelij surround with"
 date:   2015-07-01 13:49:57
 categories: jekyll update
 ---
-I recently refactored some code and had a lots of instances where I need to change code from
+I recently refactored some code that had a lots of instances where I needed to change code from
 
 ```
- final Level close = levelService.get(esContract, 1700.00);
+ levelService.get(esContract, 1700.00);
 ```
 
 to
 
 ```
- final Level close = levelService.get(esContract, new BigDecimal("1700.00"));
+ levelService.get(esContract, new BigDecimal("1700.00"));
 ```
 
 Normally structural find/replace or regex find/replace works well but not in this case. So time to learn how to write 'surround with' Live Templates.
@@ -29,7 +29,8 @@ Add an abbreviation `swbd`.
 Write a description `Surround with BigDecimal`.
 
 ####Code
-Create a new template and write your content.
+Create a new template and write your content. Use Qualified names for any classes as Intellij won't do the import for
+unless the package is specified.
 ```
 new java.math.BigDecimal("$SELECTION$")
 ```
@@ -38,7 +39,6 @@ The `$SELECTION$` is the code you want to surround.
 
 ####Define the contexts.
 In the `Java` section select `Expression`.
-Use Qualified names.
 
 ####Options
 Check `Short FQ names`. We want `java.math.BigDecimal` to appear as just `BigDecimal`.
