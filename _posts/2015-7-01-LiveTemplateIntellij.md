@@ -16,13 +16,16 @@ to
  final Level close = levelService.get(esContract, new BigDecimal("1700.00"));
 ```
 
-Normally structural find replace or regex find replace works well but not in this case. So time to learn how to write 'surround with' Live Templates.
+Normally structural find/replace or regex find/replace works well but not in this case. So time to learn how to write 'surround with' Live Templates.
 
 ### Live Templates
 Go to Live Templates in Preferences `cmd ,`. (Templates not Template)
 
+####Now fill out all the fields
+
 ####Heading
 Add an abbreviation `swbd`.
+
 Write a description `Surround with BigDecimal`.
 
 ####Code
@@ -41,6 +44,6 @@ Use Qualified names.
 Check `Short FQ names`. We want `java.math.BigDecimal` to appear as just `BigDecimal`.
 
 For this example you other options aren't needed.
-### Editor
+#### Editor
 Back in the editor select some code. Run the live template shortcut `Cmd Option J`. 
 Select your live template and enjoy saving a few keystrokes.
