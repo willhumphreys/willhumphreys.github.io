@@ -31,6 +31,7 @@ Write a description `Surround with BigDecimal`.
 ####Code
 Create a new template and write your content. Use Qualified names for any classes as Intellij won't do the import for
 unless the package is specified.
+
 ```
 new java.math.BigDecimal("$SELECTION$")
 ```
