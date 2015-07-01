@@ -43,8 +43,8 @@ Use Qualified names.
 ####Options
 Check `Short FQ names`. We want `java.math.BigDecimal` to appear as just `BigDecimal`.
 
-For this example you other options aren't needed.
+For this example the other options aren't needed.
 
 #### Editor
-Back in the editor select some code. Run the live template shortcut `Cmd Option J`. 
+Back in the editor highlight the code you want to surround. Execute the live template shortcut `Cmd Option J`. 
 Select your live template and enjoy saving a few keystrokes.
